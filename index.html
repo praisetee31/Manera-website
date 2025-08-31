@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manera - Modern Fashion</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Manera - Shop modern and minimalist fashion clothing." />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Manera</h1>
+      <nav>
+        <ul>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="cart-button" aria-label="Open cart">
+        Cart (<span id="cart-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="container">
+        <h2>Welcome to Manera</h2>
+        <p>Modern and minimalist fashion for everyday wear.</p>
+      </div>
+    </section>
+
+    <section id="featured" class="container">
+      <h2>Featured Pieces</h2>
+      <div id="product-list" class="product-grid">
+        <!-- Products will be injected here -->
+      </div>
+    </section>
+
+    <section id="shop" class="container">
+      <h2>Shop</h2>
+      <input type="search" id="search-input" placeholder="Search products..." aria-label="Search products" />
+      <select id="category-filter" aria-label="Filter by category">
+        <option value="all">All Categories</option>
+        <option value="men">Men</option>
+        <option value="women">Women</option>
+      </select>
+      <div id="shop-products" class="product-grid">
+        <!-- Shop products will appear here -->
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact Us</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required minlength="2" />
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required minlength="10"></textarea>
+        
+        <button type="submit">Send</button>
+        <p id="form-feedback" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <aside id="cart-drawer" aria-hidden="true">
+    <h2>Your Cart</h2>
+    <button id="close-cart" aria-label="Close cart">Close</button>
+    <ul id="cart-items">
+      <!-- Cart items -->
+    </ul>
+    <p id="cart-total">Total: $0.00</p>
+    <button id="checkout" disabled>Checkout</button>
+  </aside>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
